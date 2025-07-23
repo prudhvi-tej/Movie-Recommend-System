@@ -6,7 +6,7 @@ from time import sleep
 
 def fetch_poster(movie_id):
     url = f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=d75b84c8081c0ade676ff8af7e700fa5&language=en-US'
-    for attempt in range(10):
+    for attempt in range(3):
         try:
             response = requests.get(url, timeout=5)
             response.raise_for_status()
